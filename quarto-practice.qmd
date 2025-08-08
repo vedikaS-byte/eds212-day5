@@ -15,6 +15,7 @@ library(tidyverse)
 ```
 
 running code but not showing code or output
+
 ```{r}
 #| include: false
 head(starwars)
@@ -22,13 +23,12 @@ dim(starwars) # 87 entries (observations) of 14 variables
 ```
 
 showing output, not code
+
 ```{r}
 #| warning: false
 #| echo: false # evaluates code silently
 starwars %>% ggplot(aes(x = height, y = mass, col = mass)) + geom_point() + labs(x = "Height (cm)", y = "Mass (kg)")
 ```
-
-
 
 ```{r}
 #| warning: false
@@ -38,18 +38,15 @@ starwars %>% ggplot(aes(x = height)) + geom_histogram(col = "black",fill = "dark
 ```
 
 Find summary stats for starwars characters
+
 ```{r}
 sw_height_mean <- mean(starwars$height, na.rm = T)
 
 sw_height_median <- median(starwars$height, na.rm = T)
 
 sw_height_var <- var(starwars$height, na.rm = T)
+
 sw_height_sd <- sd(starwars$height, na.rm = T)
 ```
 
 The mean height of the characters in Starwars is `r round(sw_height_mean,1)` cm.
-
-
-
-
-
