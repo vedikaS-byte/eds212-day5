@@ -33,7 +33,7 @@ starwars %>% ggplot(aes(x = height, y = mass, col = mass)) + geom_point() + labs
 ```{r}
 #| warning: false
 
-starwars %>% ggplot(aes(x = height)) + geom_histogram(col = "black",fill = "darkblue", bins = 30)
+starwars %>% ggplot(aes(x = height)) + geom_histogram(col = "black",fill = "darkblue", bins = 30) + theme_minimal()
 
 ```
 
