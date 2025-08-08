@@ -1,0 +1,25 @@
+---
+title: "quarto-practice"
+format: html 
+editor: visual
+---
+
+suppressing warnings and messages JUST FOR THIS CODE CHUNK
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+#| include: false
+head(starwars)
+dim(starwars) # 87 entries (observations) of 14 variables
+
+```
+
+
+
+
+
